@@ -264,7 +264,6 @@ nav ul li {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
   cursor: pointer;
-  text-color:white;
 }
 /*social media*/
 .socials {
