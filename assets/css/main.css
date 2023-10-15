@@ -328,27 +328,25 @@ footer {
   nav {
     padding: 1.5rem 1rem;
   }
-  nav ul {
-    position: fixed;
+  
+   nav ul {
+    display: none;
+  }
+   nav ul.show {
+       display: block;
+        position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
     top: 86px;
-    left: 10%;
-    width: 80%;
+    width: 100%;
     text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    transition: 0.5s ease-in;
   }
-
    nav ul li {
     margin: 8px;
   }
-  .burger-menu {
+   .burger-menu {
     display: block;
-  }
-
-  nav ul.show {
-    transform: translateX(0);
   }
   .hero {
     margin-top: -4rem;
