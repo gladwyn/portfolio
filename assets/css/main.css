@@ -193,10 +193,12 @@ nav ul li {
 
 .project-title {
   margin-bottom: var(--bottom-margin);
+  text-align:left;
 }
 
 .project-details {
   margin-bottom: var(--bottom-margin);
+  text-align:left;
 }
 
 .project-card {
@@ -205,6 +207,16 @@ nav ul li {
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
+}
+.project-genres{
+  border: none;
+  padding: 5px 0px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin-left: 0%;
+  border-radius: 11px;
+  text-align:left;
 }
 /*contact me*/
 .contact {
@@ -328,27 +340,25 @@ footer {
   nav {
     padding: 1.5rem 1rem;
   }
-  nav ul {
-    position: fixed;
+  
+   nav ul {
+    display: none;
+  }
+   nav ul.show {
+       display: block;
+        position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
     top: 86px;
-    left: 10%;
-    width: 80%;
+    width: 100%;
     text-align: center;
-    transform: translateX(120%);
-    transition: transform 0.5s ease-in;
+    transition: 0.5s ease-in;
   }
-
    nav ul li {
     margin: 8px;
   }
-  .burger-menu {
+   .burger-menu {
     display: block;
-  }
-
-  nav ul.show {
-    transform: translateX(0);
   }
   .hero {
     margin-top: -4rem;
@@ -392,6 +402,7 @@ footer {
     max-width: 23.75rem;
   }
 }
+
 /*phone size*/
 @media screen and (max-width: 420px) {
   .hero img {
