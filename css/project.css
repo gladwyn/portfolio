@@ -56,3 +56,12 @@
     border-radius: 11px;
     text-align:left;
   }
+  @media screen and (max-width: 980px) {
+    .projects-container {
+      flex-direction: column;
+    }
+  
+    .project-container {
+      width: 20.875rem;
+    }
+  }
