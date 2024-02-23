@@ -1,179 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    
-    <!-- Favicons -->
-    <!--<link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/favicon-32x32.png"
-    />-->
-
-    <!-- Animate CSS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
-    <title>Gladwyn Tay | Prospective Computer Science Student</title>
-  </head>
-
-  <body>
-    <!-- Navbar -->
-    <nav>
-        <h1>GLADWYN TAY</h1>
-        <ul class="navigation">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <!--<li><a href="#contact" class="nav-link">Contact</a></li>-->
-        </ul>
-        <button class="burger-menu" id="burger-menu">
-          <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button>
-  </nav>
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-     <!-- <img
-          src="assets/images/wfh_1.svg"
-          alt="jane-doe"
-          loading="lazy"
-          class="hero-img"
-        />-->
-        <div class="bio animate__animated animate__shakeX">
-          <h2 class="bio-title">About Me</h2>
-          <p class="bio-text">
-            an data analytics graduate in Temasek Polytechnic (TP) that specialize in data science and programming.
-          </p>
-        </div>
-  </section>
-    <!-- More about -->
-    <section class="more-about">
-        <h2>More About Me</h2>
-        <p>
-          During my secondary times, i joined infocomm club as my CCA 
-          since then, i was fascinated by the IT World. 
-          I continued my education in ITE Higher Nitec as an application developer. 
-        </p>
-        <p>
-         During My ITE times, i was impressed by how alphago (An AI that was developed by google) beat a world champion in go/weiqi.
-         since then, i was determine to pursue my career in AI development.
-         Since TP was near my house . it will not be hustle to travel
-           And, I took up a course that is related to AI which is Big data and analytics.
-        </p>
-        <p>
-          In my course, i found my new strength which is data science which let me explore data,
-          find problems via machine learning and manual visualizations.Thus,giving suggestion
-          to solve the problems. Now, continuing the next part of journery, to serve the part of journery to serve the nation.
-                </p>
-      </section>
-    <!-- Skills section -->
-    <section class="skills" id="skills">
-        <h2 class="skill-header">My Top Skills</h2>
-  
-        <div class="skills-wrapper">
-          <div class="first-set animate__animated animate__pulse">
-            <img
-              src="assets/icons/python.png"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-html-5.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-css3.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/icons8-javascript.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-          </div>
-  
-          <div class="second-set animate__animated animate__pulse">
-            <img
-              src="assets/icons/icons8-bootstrap.svg"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-              src="assets/icons/sql.png"
-              alt=""
-              loading="lazy"
-              class="icon icon-card"
-            />
-            <img
-            src="assets/icons/java.png"
-            alt=""
-            loading="lazy"
-            class="icon icon-card"
-          />
-          <img
-          src="assets/icons/node-js.png"
-          alt=""
-          loading="lazy"
-          class="icon icon-card"
-        />
-          </div>
-        </div>
-      </section>
-    <!-- Projects section -->
-    <section class="projects" id="projects">
-        <h2 class="projects-title">Some of my Recent Projects</h2>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Gladwyn Tay | Prospective Computer Science Student</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="jquery-3.7.1.min.js"></script>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <script src="js/scroll.js"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/project.css" rel="stylesheet" />
+ 
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">GLADWYN TAY</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Others</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">About Me</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">a data analytics graduate in Temasek Polytechnic (TP) that specialize in data science and programming.</h2>
+                        <a class="btn btn-primary" href="#about">Click here to enter my journery</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">More About Me</h2>
+                        <p class="text-white-50">
+                            During my secondary times, i joined infocomm club as my CCA. Since then, I was fascinated by the IT World. 
+                            I continued my education in ITE Higher Nitec as an application developer. During My ITE times, 
+                            i was impressed by how AlphaGo , An AI that was developed by Google, beat a world champion in go as known as weiqi.
+                            Since then, i was determine to pursue my career in AI development. Since TP was near my house . it will not be hustle to travel.
+                            So, I took up a course that is related to AI which is Big data and analytics. In my course, i found my new strength data science 
+                            which allows me explore data,find problems via machine learning and manual visualizations. Thus,giving suggestion to solve the problems. 
+                            Now, continuing the next part of journery, to serve the part of journery to serve the nation.
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center"  id="skills">
+                    <div class="col-xl-5 col-lg-6">
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons-node-js.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-css3.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-javascript.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-html-5.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-java.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-bootstrap.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icon8-python.svg" alt="..." />
+                        <img class="img-fluid mb-3 mb-lg-0" src="assets/img/icons8-sql.svg" alt="..." />
+                    </div>
+                    <div class="col-xl-7 col-lg-6" >
+                        <div class="featured-text text-center text-lg-left fade-in-image">
+                            <h4>My Top Skills</h4>
+                            <p class="text-black-50 mb-0">Through my school days,I managed to pick up some programming languages.</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Projects section -->
+        <h2 class="projects-title" id="projects">Some of my Recent Projects</h2>
         <div class="projects-container">
           <div class="project-container project-card">
             <img
-              src="assets/images/resturant-booking.jpg"
+              src="assets/img/resturant-booking.jpg"
               alt="expense-tracker"
               loading="lazy"
               class="project-pic"
             />
             <h3 class="project-title">resturant booking</h3>
-            <button type="button" class="project-genres">
-              <a href="app_development.html" target="_blank" class="project-link">software/app development </a>
-            </button>
             <p class="project-details">
-            As more resturant adopts transformation, resturant begins to adopt 
-            digital stock-taking and online delivery. With just a few clicks, 
-            users can explore a world of gastronomic delights, 
-            secure their reservations, and look forward to memorable moments 
-            in the company of good food and good company.
+            As more resturants adopts transformation, adopting food odering application begins more common. 
+            As a part of the school project,i have created a prototype of food ordering application allowing 
+            users is able to view and test the application.
             </p>
-            <a href="resturant.html" target="_blank" class="project-link">Check it Out</a>
+            <a href="https://docs.google.com/presentation/d/1l479DcH6q0ht92TTP-WqZlViVbbbKsXo/edit?usp=sharing&ouid=114540661607264802342&rtpof=true&sd=true" target="_blank" class="project-link">Check it Out</a>
           </div>
           <div class="project-container project-card">
             <img
-              src="assets/images/spam-vs-ham.jpg"
+              src="assets/img/spam-vs-ham.jpg"
               alt="netflic-clone"
               loading="lazy"
               class="project-pic"
             />
-            <h3 class="project-title">SMS filtering</h3>
-            <button type="button" class="project-genres">
-              <a href="data_analytics.html" target="_blank" class="project-link">AI & analytics</a>
-            </button>
+            <h3 class="project-title">Object recgonition</h3>
             <p class="project-details">
               As the rise of scammer via SMS and whatsapp, 
               AI filtering for spammer and scammer becomes more essential.
@@ -183,19 +126,16 @@
              spam messages, promotional content, or messages from unknown 
              or blacklisted contacts.
             </p>
-            <a href="data_analytics.html" target="_blank" class="project-link">Check it Out</a>
+            <a href="https://docs.google.com/presentation/d/1clFUBlKzsATI6U0qpyvSM6O5ekBjuM_Z/edit?usp=sharing&ouid=114540661607264802342&rtpof=true&sd=true" target="_blank" class="project-link">Check it Out</a>
           </div>
           <div class="project-container project-card">
             <img
-              src="assets/images/particle-animation.jpg"
+              src="assets/img/particle-animation.jpg"
               alt="particles_animations"
               loading="lazy"
               class="project-pic"
             />
-            <h3 class="project-title">Digital Art : Particles animation with code</h3>
-            <button type="button" class="project-genres">
-              <a href="design_animation.html" target="_blank" class="project-link">Graphical design </a>
-            </button>
+            <h3 class="project-title">Particles animation </h3>
             <p class="project-details">
               Digital Art is fascinating area to explore. Some of digital art is display 
               at website to make it sophicated or being display in immersive art display.
@@ -209,74 +149,47 @@
             <!--end of pop out box-->
           </div>
         </div>
-      </section>
-      <!--Certification & community partification-->
-      <h2 class="projects-title">Others non-techincal skills and commitment</h2>
-      <section class="projects-container">
-        <div class="project-container project-card">
-          <h1>community part</h1>
-          <p>RSAF55 Beach Cleaning</p>
-        </div>
-        <div class="project-container project-card">
-          <h1>Certification</h1>
-          <ol>
-            <li><a href="#" class="nav-link">google data analytics professional courses(Currently doing)</a></li>
-            <li><a href="#" class="nav-link">google cyber security professional courses(Currently doing)</a></li>
-          </ol>
-        </div>
-      </section>
-    <div class="socials">
-        <!--<a href="#" target="_blank"
-          ><img
-            src="assets/icons/icons8-twitter-circled.gif"
-            alt="Twitter"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="#" target="_blank"
-          ><img
-            src="assets/icons/icons8-instagram.gif"
-            alt="Instagram"
-            loading="lazy"
-            class="socicon"
-        /></a>-->
-        <a href="https://sg.linkedin.com/in/gladwyn-tay-3a321b189" target="_blank"
-          ><img
-            src="assets/icons/icons8-linkedin-circled.gif"
-            alt="Linkedin"
-            loading="lazy"
-            class="socicon"
-        /></a>
-        <a href="https://github.com/gladwyn" target="_blank"
-          ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
-        /></a>
-        </div>
-    <!-- Scroll to top -->
-    <i class="scroll-up" id="scroll-up"
-    ><img
-      src="assets/icons/icons8-upward-arrow.gif"
-      class="socicon up-arrow"
-      alt="scroll-up"
-  /></i>
-    <!-- Footer section -->
-    <footer>
-      <p class="copy">
-        <a href="https://sg.linkedin.com/in/gladwyn-tay-3a321b189" target="_blank"
-          >Gladwyn Tay</a
-        >
-      </p>
-</footer>
-    <!-- Website scripts -->
-    <script src="assets/js/app.js"></script>
-
-    <!-- Ion icons scripts -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+            </div>
+        </section>
+        
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="	fas fa-chalkboard-teacher fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Course Certificates currently doing</h2>
+                        <h4>
+                         <ul class="text-white-50">
+                            <li>Google Data analytics Professional Course</li>
+                            <li>google cyber security professional courses</li>
+                        </ul>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="https://www.instagram.com/gladwyntay/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a class="mx-2" href="https://www.linkedin.com/in/gladwyn-tay-3a321b189"><i class="fab fa-linkedin">Sololearn</i></a>
+                    <a class="mx-2" href="https://www.sololearn.com/en/profile/2723101"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </section>
+        <button onclick="topFunction()"  id="myBtn" title="Go to top"><i class=" fa fa-arrow-up"></i></button>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50">
+            <div class="container px-4 px-lg-5">Gladwyn Tay</div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
