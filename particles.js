@@ -6,11 +6,12 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
-
 var pJS = function(tag_id, params){
-
+  if(document.getElementById('monotone').clicked == true)
+{
+   alert("button was clicked");
+}
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
-
   /* particles.js variables with default values */
   this.pJS = {
     canvas: {
@@ -67,7 +68,7 @@ var pJS = function(tag_id, params){
       line_linked: {
         enable: true,
         distance: 100,
-        color: '#fff',
+        color: '#000',
         opacity: 1,
         width: 1
       },
@@ -1539,3 +1540,4 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
   xhr.send();
 
 };
+
