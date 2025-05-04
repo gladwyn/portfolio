@@ -71,3 +71,17 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+//selection
+$(document).ready(function() {
+    $('#projects').change(function() {
+        // Show the corresponding div
+        if ($(this).val() == "All"){
+            $('.project-container').show();
+        } 
+        else{
+            $('.project-container').hide();
+            $('.' + $(this).val()).show();
+        }
+    });
+});
