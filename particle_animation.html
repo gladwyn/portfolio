@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" media="screen" href="css/particle_animation.css">
   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -19,11 +20,9 @@
 <div class="designselection">
   <span class="js-count-particles"> 
     <label for="project">Choose a project category:</label>
-    <select name="cars" id="cars">
-        <option value="volvo">default</option>
-    <option value="volvo">Animation</option>
-    <option value="saab">application development</option>
-    <option value="mercedes">data analytic/ AI</option>
+    <select name="cars" id="theme">
+        <option value="1">snowy</option>
+    <option value="2">Montone</option>
     </select>
   </span>
 </div>
@@ -60,6 +59,30 @@
     requestAnimationFrame(update);
   };
   requestAnimationFrame(update);
+$(document).ready(function() {
+    $('#theme').change(function() {
+        // Show the corresponding div
+        if ($(this).val() == "2"){
+          $('body').css('background-color', '#FFF');
+         
+	    $.each(pJSDom[0].pJS.particles.array, function(i){
+		    pJSDom[0].pJS.particles.array[i].color.value = '#000';
+	    	pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb('#000');
+	    	pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb('#000');
+	    });
+        } 
+        else{
+          $('body').css('background-color', '#111');
+          $('body').css('background-color', '#000');
+          $.each(pJSDom[0].pJS.particles.array, function(i){
+		       pJSDom[0].pJS.particles.array[i].color.value = '#FFF';
+		       pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb('#FFF');
+		        pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb('#FFF');
+	        });
+          
+        }
+    });
+});
 </script>
 </body>
 </html>

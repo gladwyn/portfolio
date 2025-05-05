@@ -25,6 +25,11 @@
     width: 21.875rem;
     padding: 1rem;
   }
+  .projects-containers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .project-container p {
     padding: 0.4rem;
   }
@@ -64,6 +69,9 @@
     .project-container {
       width: 20.875rem;
     }
+    .project-containers {
+      width: 20.875rem;
+    }
   }
 
   #myBtn {
@@ -82,3 +90,5 @@
     border-radius: 45px;
   }
   .fade-in-image { animation: fadeIn 10s; }
+
+  /* project category*?
