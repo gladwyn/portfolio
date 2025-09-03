@@ -1,131 +1,241 @@
-/*project*/
+/* ==========================================================================
+   Project Section Styles
+   ========================================================================== */
+
+/* Base styles for the projects section */
 .projects {
-    background-color: #fff;
-    padding: 32px 0;
-    margin-top: 2rem;
-  }
-  
-  .project-pic {
-    width: 100%; /* Make image take full width of its container */
-  height: auto; /* Allow height to adjust proportionally to maintain aspect ratio */
-  max-width: 100%; /* Ensure image doesn't exceed its container */
-  display: block; /* Remove extra space below image */
-  margin-bottom: 1rem; /* Add some space below the image */
-  }
-  
-  .projects-container {
+    background-color: #f8f9fa; /* Light background for contrast, adjust as needed */
+    padding: 64px 0; /* More generous padding top/bottom */
+    margin-top: 2rem; /* Spacing from the previous section */
+}
+
+/* Styles for project images */
+.project-pic {
+    width: 100%; /* Image takes full width of its parent container */
+    height: 200px; /* Fixed height for uniformity, adjust as needed */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block; /* Removes extra space below the image */
+    margin-bottom: 1rem; /* Space below the image */
+    border-radius: 8px; /* Slightly rounded corners for images */
+}
+
+/* Container for the "Proficiency Of The Programming Language" image */
+.projects-container {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .projects-title {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .project-container {
-    text-align: center;
-  padding: 1rem;
-  display: flex; /* Use flexbox for internal layout of the card */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Distribute space between elements */
-  height: 100%; /* Ensure cards in a row have equal height */
-  }
-  .projects-containers {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
-   gap: 10px; /* spacing between cards */
-   justify-items: center;
-   padding: 0 10px; /* Add some padding to the container */
+    padding: 0 15px; /* Add some horizontal padding */
 }
-  .project-container p {
-    padding: 0.4rem;
-  }
-  
-  .project-title {
-    margin-bottom:  0.5rem;
-    text-align:left;
-  }
-  
-  .project-details {
-    margin-bottom:  0.5rem;
-    text-align:left;
-  }
-  
-  .project-card {
-    background: #fff; /* adjust to your theme */
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 280px; /* keeps them uniform */
-    width: 100%; /* Make cards fill their grid space */
-  }
-  .project-genres{
-    border: none;
-    padding: 5px 0px;
+
+/* Titles within the projects section */
+.projects-title {
+    text-align: center;
+    margin-bottom: 2rem; /* More space below the title */
+    font-size: 2.5rem; /* Larger font size for main titles */
+    color: #343a40; /* Darker text color */
+}
+
+/* Grid container for individual project cards */
+.projects-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid: 280px min width, fills available space */
+    gap: 25px; /* Increased spacing between cards */
+    justify-items: center; /* Center cards within their grid cells */
+    padding: 0 20px; /* Padding for the grid container */
+    max-width: 1200px; /* Max width for the entire grid to keep content centered */
+    margin: 0 auto; /* Center the grid container on larger screens */
+}
+
+/* Styles for individual project cards */
+.project-card {
+    background: #ffffff; /* White background for cards */
+    padding: 20px; /* More padding inside the card */
+    border-radius: 12px; /* Rounded corners for the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer, more prominent shadow */
+    max-width: 320px; /* Slightly increased max-width for better content display */
+    width: 100%; /* Ensures card takes full width up to max-width */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    height: 100%; /* Ensures cards in a row have equal height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Project title within the card */
+.project-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem; /* More space below title */
+    text-align: left;
+    font-size: 1.4rem; /* Slightly larger title font */
+    color: #343a40;
+}
+
+/* Project details/description within the card */
+.project-details {
+    margin-bottom: 1rem; /* Space below details */
+    text-align: left;
+    font-size: 0.95rem; /* Slightly larger text for readability */
+    line-height: 1.6; /* Improved line spacing */
+    color: #6c757d; /* Muted text color */
+    /* Important for preventing text cutoff if content is too long */
+    overflow: hidden; /* Hides overflowing content */
+    text-overflow: ellipsis; /* Adds "..." for truncated text */
+    display: -webkit-box; /* Required for line-clamp */
+    -webkit-box-orient: vertical; /* Required for line-clamp */
+}
+
+/* Project link button */
+.project-link {
+    display: inline-block; /* Allows padding and margin */
+    margin-top: auto; /* Pushes the link to the bottom of the flex container */
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: #ffffff;
     text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin-left: 0%;
-    border-radius: 11px;
-    text-align:left;
-  }
-  
-  /* Responsive breakpoints for different screen sizes */
-  @media screen and (max-width: 1200px) {
-  .projects-containers {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
-  }
-}
-@media screen and (max-width: 980px) {
-  .projects-containers {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-  }
-  
-  .project-container { /* This targets individual cards within the grid */
-    width: 20.875rem;
-  }
-}
-@media screen and (max-width: 640px) {
-  .projects-containers {
-    grid-template-columns: 1fr; /* 1 column for mobile */
-    padding: 0 10px;
-  }
-  
-  .project-container { /* This targets individual cards within the grid */
-    width: 100%;
-    max-width: 350px;
-  }
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text within the button */
 }
 
-  #myBtn {
-    display:none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: grey;
-    color: white;
+.project-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styles for the project category dropdown */
+#projects {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    margin-left: 10px; /* Space from the label */
     cursor: pointer;
-    padding: 15px;
-    border-radius: 45px;
-  }
-  .fade-in-image { animation: fadeIn 10s; }
+}
 
-  /* project category*/
-  
-  .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, transform;
+/* Label for the project category dropdown */
+.projects-containers label {
+    font-size: 1.1rem;
+    color: #343a40;
+    margin-bottom: 0.5rem; /* Space below label on smaller screens */
+}
+
+/* Container for the dropdown, to allow centering */
+.projects-containers:first-of-type { /* Targeting the div containing the label and select */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center content */
+    align-items: center;
+    margin-bottom: 1.5rem; /* Space below the dropdown section */
+    padding: 0 15px; /* Add some padding */
+}
+
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media screen and (max-width: 1200px) {
+    .projects-containers {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax if needed */
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .projects-containers {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Still flexible */
+        gap: 20px;
+    }
+    .project-card {
+        max-width: 300px; /* Slightly smaller max-width for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-title {
+        font-size: 2rem; /* Smaller title on smaller screens */
+    }
+    .projects-containers {
+        grid-template-columns: 1fr; /* Single column for most mobile devices */
+        padding: 0 15px; /* Adjust padding */
+    }
+    .project-card {
+        max-width: 350px; /* Allow cards to be wider on mobile */
+        margin: 0 auto; /* Center single column cards */
+    }
+    .project-pic {
+        height: 180px; /* Adjust image height for mobile */
+    }
+    .projects-containers:first-of-type {
+        flex-direction: column; /* Stack label and select vertically */
+        align-items: center;
+    }
+    #projects {
+        margin-left: 0; /* Remove left margin when stacked */
+        margin-top: 10px; /* Add top margin when stacked */
+        width: 100%; /* Make dropdown full width */
+        max-width: 250px; /* Limit dropdown width */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects {
+        padding: 40px 0; /* Less padding on very small screens */
+    }
+    .projects-title {
+        font-size: 1.8rem;
+    }
+    .project-card {
+        padding: 15px; /* Less padding inside cards */
+    }
+    .project-pic {
+        height: 160px; /* Smaller image height */
+    }
+}
+
+
+/* ==========================================================================
+   Scroll-to-top Button
+   ========================================================================== */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* High z-index to be on top of other elements */
+    font-size: 18px; /* Icon size */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    background-color: rgba(108, 117, 125, 0.7); /* Grey with some transparency */
+    color: white; /* White text/icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 15px; /* Padding around the icon */
+    border-radius: 50%; /* Circular shape */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+#myBtn:hover {
+    background-color: #6c757d; /* Darker grey on hover */
+}
+
+/* ==========================================================================
+   Fade-in Animation
+   ========================================================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Optimize for animation */
 }
 
 /* Add class when in viewport */
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
