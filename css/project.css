@@ -27,9 +27,10 @@
   }
   .projects-containers {
      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px; /* spacing between cards */
-      justify-items: center;
+     grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+     gap: 20px; /* spacing between cards */
+     justify-items: center;
+     padding: 0 20px; /* Add some padding to the container */
   }
   .project-container p {
     padding: 0.4rem;
@@ -51,6 +52,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 280px; /* keeps them uniform */
+    width: 100%; /* Make cards fill their grid space */
   }
   .project-genres{
     border: none;
@@ -62,16 +64,33 @@
     border-radius: 11px;
     text-align:left;
   }
-  @media screen and (max-width: 980px) {
-    .projects-container {
-      flex-direction: column;
-    }
   
+  /* Responsive breakpoints for different screen sizes */
+  @media screen and (max-width: 1200px) {
+    .projects-containers {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .projects-containers {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+    
     .project-container {
       width: 20.875rem;
     }
-    .project-containers {
-      width: 20.875rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    .projects-containers {
+      grid-template-columns: 1fr; /* 1 column for mobile */
+      padding: 0 10px;
+    }
+    
+    .project-container {
+      width: 100%;
+      max-width: 350px;
     }
   }
 
