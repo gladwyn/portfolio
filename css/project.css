@@ -94,16 +94,10 @@
     display: inline-block; /* Allows padding and margin */
     margin-top: auto; /* Pushes the link to the bottom of the flex container */
     padding: 10px 20px;
-    background-color: #007bff; /* Bootstrap primary blue */
-    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
     text-align: center; /* Center text within the button */
-}
-
-.project-link:hover {
-    background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Styles for the project category dropdown */
